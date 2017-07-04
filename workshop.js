@@ -9,15 +9,28 @@ function forEach(callback, theArray) {
   }
   */
   
-  for (var i = 0; i < theArray.length; i++) {
+  /* for (var i = 0; i < theArray.length; i++) {
     
     callback(theArray[i]);
     
+  } */
+  
+  for (var i = 0; i < theArray.length; i++) {
+    callback(theArray[i], i);
   }
   
 }
 
 function map(mappingFunction, theArray) {
+
+  var newArray = [];
+  forEach(function(element){
+    
+    newArray.push(mappingFunction(element));
+  
+    }, theArray);
+  
+  return newArray;
 
 }
 
