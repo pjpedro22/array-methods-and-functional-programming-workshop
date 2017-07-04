@@ -61,7 +61,12 @@ function some(predicate, theArray) {
 
 function indexOf(item, theArray) {
 
+ for (var i = 0; i < theArray.length; i++) {
+   if (theArray[i] === item) return i;
+ }
+ return -1;
 }
+
 
 function findIndex(predicate, theArray) {
 
