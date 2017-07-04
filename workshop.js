@@ -45,7 +45,11 @@ function filter(predicate, theArray) {
 
 
 function every(predicate, theArray) {
-
+  if (theArray.length === 0) return true;
+  for (var i = 0; i < theArray.length; i++) {
+    if (!predicate(theArray[i])) return false;
+    }
+    return true;
 }
 
 function some(predicate, theArray) {
