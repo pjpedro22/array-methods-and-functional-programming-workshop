@@ -36,7 +36,13 @@ function map(mappingFunction, theArray) {
 
 function filter(predicate, theArray) {
 
+  var newArray = [];
+    forEach(function(element) {
+      if (predicate(element)) newArray.push(element);
+    }, theArray);
+  return newArray;
 }
+
 
 function every(predicate, theArray) {
 
