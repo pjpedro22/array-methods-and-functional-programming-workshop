@@ -116,7 +116,9 @@ function negate2(predicate) {
 }
 
 function compose1(fun1, fun2) {
-
+  return function(x) {
+    return fun1(fun2(x))
+  }
 }
 
 function compose2(arrOfFuncs) {
