@@ -80,7 +80,8 @@ function first(n, theArray) {
 }
 
 function last(n, theArray) {
-
+  if (Array.isArray(n)) return n[n.length-1];
+  return theArray.slice(theArray.length-n);
 }
 
 function pluck(property, arrayOfObjects) {
