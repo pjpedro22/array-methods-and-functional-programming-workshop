@@ -75,7 +75,8 @@ function findIndex(predicate, theArray) {
 }
 
 function first(n, theArray) {
-
+  if (Array.isArray(n)) return n[0];
+  return theArray.slice(0, n);
 }
 
 function last(n, theArray) {
