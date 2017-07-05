@@ -110,7 +110,9 @@ function negate1(predicate) {
 }
 
 function negate2(predicate) {
-
+  return function(a, b) {
+    return !predicate(a, b);
+  };
 }
 
 function compose1(fun1, fun2) {
