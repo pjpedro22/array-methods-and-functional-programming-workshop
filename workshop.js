@@ -122,7 +122,13 @@ function compose1(fun1, fun2) {
 }
 
 function compose2(arrOfFuncs) {
-
+  return function(arg) {
+    var temp = arg;
+    for (var i = arrOfFuncs.length-1, l = 0; i >= l; i--) {
+      temp = arrOfFuncs[i](temp);
+    }
+    return temp;
+  }
 }
 
 /***** DO NOT EDIT AFTER THIS LINE *****/
